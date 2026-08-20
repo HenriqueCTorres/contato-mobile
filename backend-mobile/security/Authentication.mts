@@ -34,10 +34,6 @@ const authMiddleware = (req : Request, res : Response, next : NextFunction) => {
     const auth = req.header("Authorization");
     console.log("Auth: ", auth);
 
-    for (let i = 0; i < 1000; i++) { 
-        console.log(i);
-    }
-
     // const posInicial = auth?.indexOf("Bearer ");
     // if (posInicial && posInicial !== -1) { 
     const authLista = auth?.split(" ");

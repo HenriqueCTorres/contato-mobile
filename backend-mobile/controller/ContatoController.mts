@@ -9,6 +9,7 @@ const lista : Array<Contato> = [
 
 class ContatoController { 
     public criar(req : Request, res : Response) { 
+        console.log("Executado POST no recurso /contato");
         const contato = req.body;
         lista.push( contato );
         res.status(201).send("Contato criado com sucesso");
@@ -16,7 +17,7 @@ class ContatoController {
 
 
     public pesquisarTodos(req : Request, res : Response) {
-        console.log("Executado GET no recurso /");
+        console.log("Executado GET no recurso /contato");
         res.status(200).send( lista );
     }
 }
